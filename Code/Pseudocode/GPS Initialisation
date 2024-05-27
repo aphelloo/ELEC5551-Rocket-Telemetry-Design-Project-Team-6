@@ -1,0 +1,25 @@
+GPS INITIALISATION
+
+Initialise GPS  
+Include SoftwareSerial.h and TinyGPS.h libraries 
+  
+Initialize a TinyGPS object named gps 
+Initialize a SoftwareSerial object named ss with pins 4 (RX) and 3 (TX) for the GPS module 
+  
+setup(): 
+Begin serial communication with a baud rate of 9600 
+Begin SoftwareSerial communication with a baud rate of 9600 for the GPS module 
+Print "Initializing GPS coordinates transmission with TinyGPS v basestation." 
+Print the version of the TinyGPS library 
+  
+loop(): 
+Set newData to false 
+Declare characters as an unsigned long 
+Declare sentences and failures as unsigned short 
+  
+// Check for GPS data every 5 seconds 
+for each 5-second interval: 
+while there is data available from the GPS module: 
+          Read a character from the GPS module 
+          If the GPS data is valid after encoding the character: 
+          	Set newData to true 
