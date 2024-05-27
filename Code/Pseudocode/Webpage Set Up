@@ -1,0 +1,25 @@
+WEBPAGE SET UP
+
+Declare HTMP document 
+Set webpage content to adjust to different screen widths 
+Specify blank favicon icon 
+Display the webpage heading 
+ 
+extractSections (chain, separator): 
+Split the chain into sections according to the separator, named sections 
+Create empty matrix for timestamp, GPSData, Temp1Data, Temp2Data, Temp3Data, Temp4Data, Temp5Data, HumData, AccData, AltData, SpeedData 
+Define separator 
+//Based on order of data received by rocket, the sections can be appended to the appropriate matrix 
+ 
+Start a table with headers “Data Obtained” and “Results” 
+Start a row in the table with data “Latitude and Longitude” in the first cell and a span element with class “sensor” in the second cell  
+Start an anchor tag (link) 
+Print the content of the GPSData variable 
+  	Close the anchor tag 
+     Print the GPSData //Will now be displayed as a hyperlink 
+     Close the span and table row 
+//Start a row in the table for each sensor data and add the appropriate matrix data. 
+ 
+Close the HTML document 
+     Stop the client connection 
+     Print "Client disconnected" 
