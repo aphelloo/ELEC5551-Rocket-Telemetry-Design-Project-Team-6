@@ -1,12 +1,12 @@
 Procedure InitialiseSystem:
-    Set initial power mode to highest Power Mode for both components
+    Set initial power mode to highest Power Mode for altimeter, GPS and MAX
 
 Procedure CheckRocketStatus:
     Return Altimeter reading to determine if landed (altitude near zero or if there is no changes to height after a certain period of time)
 
 Procedure SwitchToLowPowerMode:
     If CheckRocketStatus indicates landing:
-        Set all Components to LOWEST power mode
+        Set altimeter, GPS and MAX to LOWEST power mode
 
 Procedure Main:
     InitialiseSystem()
