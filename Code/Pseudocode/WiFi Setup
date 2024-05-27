@@ -1,0 +1,51 @@
+WIFI SETUP
+
+Include WiFi and Wire libraries 
+
+//Pins 16 and 17 for the LORA module 
+Declare constants RXD2 and TXD2 as 16 and 17 respectively 
+  
+//WiFi network credentials 
+Declare constants ssid and password with your WiFi network name and password 
+  
+Create a WiFi server on port 80 
+  
+setup(): 
+Initialize serial communication with baud rate 9600 on Serial 1 
+Initialize serial communication with baud rate 9600, 8N1, using pins RXD2 and TXD2 for Serial 2 
+
+Print "Connecting to WiFi network" 
+Print ssid 
+  
+Attempt to connect to the WiFi network 
+while WiFi is not connected: 
+Delay for 500 milliseconds 
+Print "." 
+End while 
+ 
+Print "Connected to WiFi network." 
+Print "IP address is: " 
+Print WiFi local IP address 
+  
+Begin the server 
+Print "Server started" 
+Delay for 2000 milliseconds 
+  
+loop(): 
+if Serial2 is available: 
+Clear 'chain' 
+while Serial2 is available: 
+Append the Serial2 read character to 'chain' 
+Delay for 1 millisecond 
+End while 
+End if 
+  
+//Condition that is met every 5 seconds 
+Check for a client connection to the server 
+if a client is connected: 
+Print "Web client connected" 
+Read the client's request 
+Send HTTP response headers of type HTML 
+Close client connection 
+Set the page refresh rate to 5 seconds 
+	End if
