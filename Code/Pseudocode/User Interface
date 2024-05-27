@@ -1,0 +1,53 @@
+USER INTERFACE PSEUDOCODE
+
+Procedure InitialiseInterface:
+    Create mainWindow with responsive layout 
+    Define mapSection, graphSection, and meteringSection as major components of the interface
+    Set up GUI for webpage
+
+Procedure SetupMap:
+    Add MapComponent to mapSection
+        Set markers for Payload Module and Base Station
+        Ensure map updates position in real-time based on telemetry data
+
+Procedure SetupGraph:
+    Integrate GraphComponent into graphSection
+        Plot Altitude, Acceleration or Velocity against Time depending on radio button selection
+        Style graphs for maximum clarity
+
+Procedure SetupMetering:
+    Integrate MeteringWindow into meteringSection
+        Display data for Altitude, Acceleration, Velocity
+        Include Compass and Distance indicator with real-time updates
+
+Procedure SetupDataRetrieval:
+    Define variables for altitude, velocity, and time 
+
+Procedure CalculateCompassDirection:
+    Retrieve current direction from compass (compassDirection)
+    Update Compass in webpage based on compassDirection
+
+Procedure CalculateMetrics:
+    Retrieve current telemetry data including heading
+    Update GraphComponent and MeteringWindow with new data
+    Call CalculateCompassDirection
+    Calculate distance from current location to base station based on GPS Location
+
+Procedure AdjustLayoutForDeviceType:
+    If device is mobile:
+        Stack mapSection, graphSection, and meteringSection vertically
+    Else:
+        Arrange sections horizontally
+
+Procedure RenderInterface:
+    Load all components with initial location related telemetry data from matrix
+    Implement real-time data refresh across all components
+
+Procedure Main:
+While Webpage is open:
+      InitialiseInterface()
+      SetupMap()
+      SetupGraph()
+      SetupMetering()
+      SetupDataRetrieval()
+Exit Page
