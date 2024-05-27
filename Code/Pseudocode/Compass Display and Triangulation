@@ -1,0 +1,31 @@
+COMPASS DISPLAY AND TRIANGULATION
+
+\\Initialise Compass  
+Import compass graphic to webpage 
+For 1/20 seconds read compass input  
+Update compass graphic on webpage showing direction the base station is pointing towards basestation
+
+\\Direction finding reading 
+While triangulation is active – Loop 
+For every 0.5 second interval 
+Read signal strength from triangulation antenna - 
+Update compass graphic – via size of directional marker	 
+If signal strength = 0 (+/- 0.5) %looking for null reading 
+Directional Marker = MAX 
+Else If signal strength > 0.5 
+directional maker size = MAX/signal strength 
+End if 
+
+\\Triangulation 
+While triangulation is active  
+Loop while triangulation is active 
+If signal strength = 0 (+/- 0.5) 
+Save Tiny GPS data of basestation and compass heading 
+Print information on webpage map. 
+End if  
+End loop 
+
+\\3D triangulation 
+Initialise altimeter 
+read height from altimeter 
+print height on webpage % indicating height from basestation 
