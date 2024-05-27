@@ -42,7 +42,8 @@ Using the *.kicad_mod file:
 * In KiCad, go to Preferences.
 * Click on Manage Footprint Libraries.
 * On the Global Libraries tab, click on Browse Libraries (the small folder icon)
-* Navigate to the Folder where the .kicad_mod file is located. Then click Select Folder. (Note: You will not normally see the .kicad_mod file on this step because you need to select the folder where it is located.)
+* Navigate to the Folder where the .kicad_mod file is located. Then click Select Folder. (Note: You will not normally see the .kicad_mod file on this step because
+  you need to select the folder where it is located.)
 * The library will appear, click OK.
 * Click on Footprint Editor.
 * Type on the filter search field, and navigate to the footprint you imported.
@@ -54,7 +55,7 @@ Files are under simulations > spice simulations
 * Go to the voltage regulator and right click on properties
 * Then click on Simulation Model
 * Click folder near the file tab
-* Go to location of LM1117_N_ADJ_TRANS.LIB and TPS7A0530P_TRANS.lib depending on the file (see name of component to see which is right)
+* Go to location of LM1117_N_ADJ_TRANS.LIB or TPS7A0530P_TRANS.lib depending on the file (see name of component to see which is right) - do not change anything else in that tab
 * Ensure pin assignments for symbol and model pin match each other in the Simulation Model
 * Click Ok in Simulation Model
 * Click Ok in Properties Tab
