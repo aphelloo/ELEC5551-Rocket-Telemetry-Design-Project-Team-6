@@ -1,4 +1,4 @@
-POWER MANAGEMENT PSUEDOCODE
+POWER MANAGEMENT PSEUDOCODE
 
 Procedure InitialiseSystem:
     Set initial power mode to highest Power Mode for altimeter, GPS and MAX
